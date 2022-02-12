@@ -1,0 +1,45 @@
+﻿@page
+@model NotePad.Pages.CreateModel
+@{
+    ViewData["Title"] = "Write A Note";
+}
+
+    <h1>@ViewData["Title"]</h1>
+    <div class="container">
+        <form method ="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col">
+                
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    
+                    </div>
+                <textarea rows="2" asp-for="Note.Title" class="form-control" aria-label="With textarea" placeholder="Note Title"></textarea>
+                <span asp-validation-for="Note.Title" class="text-danger"></span>
+                </div>
+                <div class="row">
+                
+                <textarea rows="10" asp-for="Note.Description" class="form-control" aria-label="With textarea" placeholder="Note Details"></textarea>
+                <span asp-validation-for="Note.Description" class="text-danger"></span>
+                </div>
+                </div>
+             </div>
+         
+         <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-end">
+                    <input type="submit" value="Save" class="btn btn-primary btn-lg "></input>
+                </div>
+            </div>
+         </div>
+         </form>
+
+       
+    </div>
+
+      @section Scripts {
+          @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+         }
+
+

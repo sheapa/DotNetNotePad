@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	<TargetFramework>net6.0</TargetFramework>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Reference Include="DataLibrary">
+	  <HintPath>..\..\NotePadDB\DataLibrary\bin\Release\net6.0\DataLibrary.dll</HintPath>
+	</Reference>
+	<Reference Include="NotePadDB">
+	  <HintPath>NotePadDB.dll</HintPath>
+	</Reference>
+	  <PackageReference Include="Dapper" Version="2.0.123" />
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
